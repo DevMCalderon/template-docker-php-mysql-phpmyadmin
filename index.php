@@ -1,10 +1,12 @@
 <?php 
 
+  $dotenv = parse_ini_file('.env', true);
+
   $connect = mysqli_connect(
-    'db', # service name
-    'php_docker', # username
-    'password', # password
-    'php_docker' # db name
+    $dotenv['DB_HOST'], # service name
+    $dotenv['DB_USER'], # username
+    $dotenv['DB_PASSWORD'], # password
+    $dotenv['DB_NAME'] # db name
   );
   
   $table_name = "php_docker_table";
@@ -19,9 +21,7 @@
   {
     echo "<p>".$i['a']."</p>";
     echo "<p>".$i['b']."</p>";
-    echo "<p>".$i['c']."</p>";
     echo "<hr>";
   }
-
 
 ?>
