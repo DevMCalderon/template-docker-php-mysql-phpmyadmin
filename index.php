@@ -17,9 +17,9 @@
   
   while($i = mysqli_fetch_assoc($response))
   {
-    echo "<p>".$i['title']."</p>";
-    echo "<p>".$i['body']."</p>";
-    echo "<p>".$i['date_created']."</p>";
+    echo "<p>".$i['a']."</p>";
+    echo "<p>".$i['b']."</p>";
+    echo "<p>".$i['c']."</p>";
     echo "<hr>";
   }
 
